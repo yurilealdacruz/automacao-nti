@@ -54,14 +54,14 @@ $localVersion = "1.1.0"
 $repoOwner         = "yurilealdacruz"
 $repoName          = "automacao-nti"
 $repoBranch        = "main"
-$updateCheckUrl = "https://raw.githubusercontent.com/$repoOwner/$repoName/$repoBranch/version.txt"
+$updateCheckUrl = "https://raw.githubusercontent.com/$repoOwner/$repoName/refs/heads/$repoBranch/Version.txt"
 
 # URL de download do .exe publicado como asset de uma Release do GitHub.
 # Não usa a API do GitHub (api.github.com) de propósito: a API tem limite de
 # 60 requisições/hora por IP para chamadas sem autenticação, e várias máquinas
 # formatando na mesma rede/IP da escola poderiam bater nesse limite. Essa URL
 # é montada direto a partir da versão lida do version.txt, sem chamar a API.
-$updateDownloadUrlTemplate = "https://github.com/$repoOwner/$repoName/releases/download/v{0}/AutomacaoNTI.exe"
+$updateDownloadUrlTemplate = "https://github.com/$repoOwner/$repoName/raw/refs/heads/main/AutomacaoNTI.exe"
 
 # --- Configuração local salva (usuário / domínio / senha opcional) ---
 $configPath = Join-Path $CaminhoAtual "config.json"
